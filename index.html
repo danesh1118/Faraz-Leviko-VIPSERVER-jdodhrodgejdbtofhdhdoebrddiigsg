@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
+        /* دقیقاً همان استایل قبلی بدون هیچ تغییری */
         :root {
             --primary: #4361ee;
             --success: #06d6a0;
@@ -314,7 +315,6 @@
 
 <script>
 const serverConfigs = [
-    // 1. Canada
     {
         "dns": {
             "hosts": {
@@ -336,10 +336,10 @@ const serverConfigs = [
             {"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http-in"},
             {"listen":"127.0.0.1","port":10853,"protocol":"dokodemo-door","settings":{"address":"chatgpt.com","network":"tcp,udp","port":53},"tag":"dns-in"}
         ],
-        "remarks": "Canada 🇨🇦",
+        "remarks": "🇩🇪 - r",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"6202b230-417c-4d8e-b624-0f71afa9c75d","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"sni.111000.indevs.in","path":"/?ed=2560"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"sni.111000.indevs.in","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"9ccd06a2-5616-47e3-9763-f9696959d7ad","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"rAyAn-cOnFiG-de-1.pAriSa.dPdNs.oRg","path":"/ws"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"chrome","serverName":"rAyAn-cOnFiG-de-1.pAriSa.dPdNs.oRg","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
@@ -348,32 +348,13 @@ const serverConfigs = [
         "policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
         "routing":{"domainStrategy":"IPIfNonMatch","rules":[{"inboundTag":["dns-in"],"outboundTag":"dns-out"},{"ip":["8.8.8.8"],"outboundTag":"direct","port":"53"},{"outboundTag":"proxy","network":"tcp,udp"}]}
     },
-
-    // 2. Switzerland
     {
         "dns": { /* همان dns بالا */ },
         "inbounds": [ /* همان inbounds */ ],
-        "remarks": "Switzerland 🇨🇭",
+        "remarks": "🇩🇪 germany",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":2082,"users":[{"id":"cb213db5-803d-49dd-a7e2-46d938af0751","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"amiroo-l43dac88-v2.amiroo-d8b.workers.dev","path":"/?ed=2560"},"security":"none"},"tag":"proxy"},
-            {"protocol":"freedom","settings":{"fragment":{"packets":"1-1","length":"3-5","interval":"5"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
-            {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
-            {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
-            {"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}
-        ],
-        "policy": { /* همان */ },
-        "routing": { /* همان */ }
-    },
-
-    // 3. Germany 1
-    {
-        "dns": { /* همان */ },
-        "inbounds": [ /* همان */ ],
-        "remarks": "Germany 1 🇩🇪",
-        "log": {"loglevel":"warning"},
-        "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"4a73fddb-e8c2-45fe-ad2c-e5bde13e51a6","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"cdn-nodes.maviks.eu","path":"/pLmdwS3fSrE9WwdgE3LdG2?ed=2560?/@JOKERRVPNJoin_Bade_Channel@JOKERRVPN"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"chrome","serverName":"cdn-nodes.maviks.eu","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"a992c7a6-832b-4243-a294-d34783d0294c","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"hotchoclate.graphapp.ir","path":"/v2rayroad"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"chrome","serverName":"hotchoclate.graphapp.ir","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
@@ -382,15 +363,13 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 4. Germany 2
     {
         "dns": { /* همان */ },
         "inbounds": [ /* همان */ ],
-        "remarks": "Germany 2 🇩🇪",
+        "remarks": "🇫🇮 finland",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":2053,"users":[{"id":"e5f8a9f6-f164-479b-b3b5-b90f213c7145","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"ir1.airpanel.top","path":"/"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"ir1.airpanel.top","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"1464720a-a342-4e1c-ae46-b23d01797b43","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"music.parvareshmorghe.ir","path":"/Napsternet2-TEL?ed=2560"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":["h2","http/1.1"],"fingerprint":"chrome","serverName":"music.parvareshmorghe.ir","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
@@ -399,15 +378,13 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 5. France vmess
     {
         "dns": { /* همان */ },
         "inbounds": [ /* همان */ ],
-        "remarks": "[🇫🇷] [vm-tl-ws] [260214-134827.684]",
+        "remarks": "🇮🇹 italy",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vmess","settings":{"vnext":[{"address":"chatgpt.com","port":8443,"users":[{"id":"19e52bf4-1b7d-4bd4-ae66-6ca024436c17","security":"auto","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"","path":"/gbt"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"frsys.fl-dl.com","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"2f466a3b-5093-4556-8759-c87c8511c753","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"rAyAn-cOnFiG-it-1.pArSa.dPdNs.oRg","path":"/ws"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"chrome","serverName":"rAyAn-cOnFiG-it-1.pArSa.dPdNs.oRg","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
@@ -416,32 +393,13 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 6. Hong Kong
     {
         "dns": { /* همان */ },
         "inbounds": [ /* همان */ ],
-        "remarks": "Hong kong 🇭🇰",
+        "remarks": "🇯🇵 japan",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":8880,"users":[{"id":"41ccd500-43f8-457f-9bd9-de5273a103e8","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"52yunwang.dpdns.org","path":"/?ed=2560"},"security":"none"},"tag":"proxy"},
-            {"protocol":"freedom","settings":{"fragment":{"packets":"1-1","length":"3-5","interval":"5"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
-            {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
-            {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
-            {"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}
-        ],
-        "policy": { /* همان */ },
-        "routing": { /* همان */ }
-    },
-
-    // 7. Korea
-    {
-        "dns": { /* همان */ },
-        "inbounds": [ /* همان */ ],
-        "remarks": "Korea 🇰🇷",
-        "log": {"loglevel":"warning"},
-        "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"61066a16-78fc-4446-8013-6646bc3f27ba","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"afrcloud22.mmv.kr","path":"/103.86.44.120=65432"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"afrcloud22.mmv.kr","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"1e681d1b-3f6e-4bd4-9fed-b8976bd1b3be","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"afrcloud22.mmv.kr","path":"/45.76.192.129=24434"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"afrcloud22.mmv.kr","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
@@ -450,12 +408,25 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 8. Netherlands
     {
         "dns": { /* همان */ },
         "inbounds": [ /* همان */ ],
-        "remarks": "Netherlands 🇳🇱",
+        "remarks": "🇰🇷 korea",
+        "log": {"loglevel":"warning"},
+        "outbounds": [
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"31ded4f6-2460-41b1-8922-94632c5c5543","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"afrcloud22.mmv.kr","path":"/132.226.21.116=6056"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"afrcloud22.mmv.kr","show":false}},"tag":"proxy"},
+            {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
+            {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
+            {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
+            {"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}
+        ],
+        "policy": { /* همان */ },
+        "routing": { /* همان */ }
+    },
+    {
+        "dns": { /* همان */ },
+        "inbounds": [ /* همان */ ],
+        "remarks": "🇳🇱 - CREDibLe NL",
         "log": {"loglevel":"warning"},
         "outbounds": [
             {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":80,"users":[{"id":"33e1a095-1e25-4198-bfe7-ec312e4f98ee","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.","path":"/?ed"},"security":"none"},"tag":"proxy"},
@@ -467,15 +438,13 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 9. Sweden
     {
         "dns": { /* همان */ },
         "inbounds": [ /* همان */ ],
-        "remarks": "Sweden 🇸🇪",
+        "remarks": "🇵🇱 - vpnazadie PL",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"trojan","settings":{"servers":[{"address":"chatgpt.com","port":8443,"password":"T9BpZIVMNv","level":8}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"sweden.vmaxpanel.com","path":"/amd"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"sweden.vmaxpanel.com","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"128a854c-13ab-472e-b418-139869e82df6","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"vpnazadie.store","path":"/vless-tls"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"telegram.vpnazadie.store","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
@@ -484,16 +453,14 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 10. Turkey
     {
         "dns": { /* همان */ },
         "inbounds": [ /* همان */ ],
-        "remarks": "Turkye 🇹🇷",
+        "remarks": "🇸🇬 - afrcloud SG",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vmess","settings":{"vnext":[{"address":"chatgpt.com","port":80,"users":[{"id":"43dcdce1-3cea-4193-bc8d-90b92071d779","security":"auto","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"tr1-smart.adelping.com.","path":"/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560"},"security":"none"},"tag":"proxy"},
-            {"protocol":"freedom","settings":{"fragment":{"packets":"1-1","length":"3-5","interval":"5"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"0ec1c958-0087-4ca6-b4b2-b846c0f62419","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"afrcloud22.mmv.kr","path":"/45.32.100.46=13802"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"chrome","serverName":"afrcloud22.mmv.kr","show":false}},"tag":"proxy"},
+            {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
             {"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}
@@ -501,79 +468,24 @@ const serverConfigs = [
         "policy": { /* همان */ },
         "routing": { /* همان */ }
     },
-
-    // 11. Singapore (جدید)
     {
-        "dns": {
-            "hosts": {
-                "domain:googleapis.cn": "googleapis.com",
-                "dns.alidns.com": ["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],
-                "one.one.one.one": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],
-                "dot.pub": ["1.12.12.12","120.53.53.53"],
-                "dns.google": ["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],
-                "dns.quad9.net": ["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],
-                "common.dot.dns.yandex.net": ["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"],
-                "dns.403.online": ["10.202.10.202","10.202.10.102"],
-                "free.shecan.ir": ["178.22.122.100","185.51.200.2"]
-            },
-            "servers": ["https://94.140.14.14/dns-query","https://free.shecan.ir/dns-query","https://dns.403.online/dns-query","10.202.10.11","10.202.10.10","85.15.1.15","85.15.1.14","1.1.1.1"],
-            "tag": "dns"
-        },
-        "inbounds": [
-            {"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":true},"tag":"socks-in"},
-            {"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http-in"},
-            {"listen":"127.0.0.1","port":10853,"protocol":"dokodemo-door","settings":{"address":"chatgpt.com","network":"tcp,udp","port":53},"tag":"dns-in"}
-        ],
-        "remarks": "Singapore 🇸🇬",
+        "dns": { /* همان */ },
+        "inbounds": [ /* همان */ ],
+        "remarks": "🇺🇸 - afrcloud US",
         "log": {"loglevel":"warning"},
         "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":80,"users":[{"id":"53342b53-157e-4475-9f3a-40439434e689","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"c.iamdt.dpdns.org","path":"/"},"security":"none"},"tag":"proxy"},
-            {"protocol":"freedom","settings":{"fragment":{"packets":"1-1","length":"3-5","interval":"5"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
-            {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
-            {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
-            {"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}
-        ],
-        "policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
-        "routing":{"domainStrategy":"IPIfNonMatch","rules":[{"inboundTag":["dns-in"],"outboundTag":"dns-out"},{"ip":["8.8.8.8"],"outboundTag":"direct","port":"53"},{"outboundTag":"proxy","network":"tcp,udp"}]}
-    },
-
-    // 12. USA vmess (جدید)
-    {
-        "dns": {
-            "hosts": {
-                "domain:googleapis.cn": "googleapis.com",
-                "dns.alidns.com": ["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],
-                "one.one.one.one": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],
-                "dot.pub": ["1.12.12.12","120.53.53.53"],
-                "dns.google": ["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],
-                "dns.quad9.net": ["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],
-                "common.dot.dns.yandex.net": ["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"],
-                "dns.403.online": ["10.202.10.202","10.202.10.102"],
-                "free.shecan.ir": ["178.22.122.100","185.51.200.2"]
-            },
-            "servers": ["https://94.140.14.14/dns-query","https://free.shecan.ir/dns-query","https://dns.403.online/dns-query","10.202.10.11","10.202.10.10","85.15.1.15","85.15.1.14","1.1.1.1"],
-            "tag": "dns"
-        },
-        "inbounds": [
-            {"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":true},"tag":"socks-in"},
-            {"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http-in"},
-            {"listen":"127.0.0.1","port":10853,"protocol":"dokodemo-door","settings":{"address":"chatgpt.com","network":"tcp,udp","port":53},"tag":"dns-in"}
-        ],
-        "remarks": "USA 🇺🇸",
-        "log": {"loglevel":"warning"},
-        "outbounds": [
-            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vmess","settings":{"vnext":[{"address":"chatgpt.com","port":2083,"users":[{"id":"e6395c20-4571-4b34-d6b1-55a5d36e49ea","security":"auto","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"hgtrojan.zabc.net","path":"/e6395c20"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"hgtrojan.zabc.net","show":false}},"tag":"proxy"},
+            {"mux":{"concurrency":-1,"enabled":false,"xudpConcurrency":8,"xudpProxyUDP443":""},"protocol":"vless","settings":{"vnext":[{"address":"chatgpt.com","port":443,"users":[{"id":"d85ea913-7dfa-44b0-bd66-33414e897991","encryption":"none","flow":"","level":8}]}]},"streamSettings":{"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"tcpNoDelay":true},"network":"ws","wsSettings":{"host":"afrcloud22.mmv.kr","path":"/35.230.79.26=443"},"security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[""],"fingerprint":"","serverName":"afrcloud22.mmv.kr","show":false}},"tag":"proxy"},
             {"protocol":"freedom","settings":{"fragment":{"packets":"tlshello","length":"10-20","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpKeepAliveIdle":100,"TcpNoDelay":true}},"tag":"fragment"},
             {"protocol":"dns","sockopt":{"dialerProxy":"fragment"},"tag":"dns-out"},
             {"protocol":"freedom","settings":{"domainStrategy":"UseIP"},"tag":"direct"},
             {"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}
         ],
-        "policy":{"levels":{"8":{"connIdle":300,"downlinkOnly":1,"handshake":4,"uplinkOnly":1}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
-        "routing":{"domainStrategy":"IPIfNonMatch","rules":[{"inboundTag":["dns-in"],"outboundTag":"dns-out"},{"ip":["8.8.8.8"],"outboundTag":"direct","port":"53"},{"outboundTag":"proxy","network":"tcp,udp"}]}
+        "policy": { /* همان */ },
+        "routing": { /* همان */ }
     }
 ];
 
-const countryEmojis = ["🇨🇦","🇨🇭","🇩🇪","🇩🇪","🇫🇷","🇭🇰","🇰🇷","🇳🇱","🇸🇪","🇹🇷","🇸🇬","🇺🇸"];
+const countryEmojis = ["🇩🇪","🇩🇪","🇫🇮","🇮🇹","🇯🇵","🇰🇷","🇳🇱","🇵🇱","🇸🇬","🇺🇸"];
 
 const START_TIME = Date.parse('2026-02-11T13:30:00Z');
 const PERIOD_MS = 14 * 24 * 60 * 60 * 1000;
@@ -604,7 +516,7 @@ function copyAllManual(){
 }
 
 function copySubLink(){
-    const link="https://raw.githubusercontent.com/danesh1118/Faraz-Leviko-VIPSERVER-jdodhrodgejdbtofhdhdoebrddiigsg/refs/heads/main/Sub";
+    const link="https://raw.githubusercontent.com/danesh1118/Toxic-server-vip-jspeheojwkdpjfrprhdgjdheodudhjdodnnfspsj/refs/heads/main/Sub";
     navigator.clipboard.writeText(link).then(()=>alert("لینک سابسکریپشن کپی شد!")).catch(()=>prompt("کپی نشد:",link));
 }
 
@@ -695,18 +607,16 @@ document.addEventListener("DOMContentLoaded",()=>{updateDisplay();setInterval(up
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Canada</td><td><img src="https://flagcdn.com/ca.svg" class="flag" alt="CA"> کانادا</td><td>105 ms</td><td>22%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(0)">کپی</button></td></tr>
-                        <tr><td>Switzerland</td><td><img src="https://flagcdn.com/ch.svg" class="flag" alt="CH"> سوئیس</td><td>65 ms</td><td>18%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(1)">کپی</button></td></tr>
-                        <tr><td>Germany 1</td><td><img src="https://flagcdn.com/de.svg" class="flag" alt="DE"> آلمان ۱</td><td>45 ms</td><td>20%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(2)">کپی</button></td></tr>
-                        <tr><td>Germany 2</td><td><img src="https://flagcdn.com/de.svg" class="flag" alt="DE"> آلمان ۲</td><td>48 ms</td><td>21%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(3)">کپی</button></td></tr>
-                        <tr><td>France vmess</td><td><img src="https://flagcdn.com/fr.svg" class="flag" alt="FR"> فرانسه</td><td>60 ms</td><td>23%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(4)">کپی</button></td></tr>
-                        <tr><td>Hong Kong</td><td><img src="https://flagcdn.com/hk.svg" class="flag" alt="HK"> هنگ‌کنگ</td><td>135 ms</td><td>27%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(5)">کپی</button></td></tr>
-                        <tr><td>Korea</td><td><img src="https://flagcdn.com/kr.svg" class="flag" alt="KR"> کره جنوبی</td><td>140 ms</td><td>25%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(6)">کپی</button></td></tr>
-                        <tr><td>Netherlands</td><td><img src="https://flagcdn.com/nl.svg" class="flag" alt="NL"> هلند</td><td>55 ms</td><td>19%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(7)">کپی</button></td></tr>
-                        <tr><td>Sweden</td><td><img src="https://flagcdn.com/se.svg" class="flag" alt="SE"> سوئد</td><td>62 ms</td><td>20%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(8)">کپی</button></td></tr>
-                        <tr><td>Turkey</td><td><img src="https://flagcdn.com/tr.svg" class="flag" alt="TR"> ترکیه</td><td>90 ms</td><td>24%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(9)">کپی</button></td></tr>
-                        <tr><td>Singapore</td><td><img src="https://flagcdn.com/sg.svg" class="flag" alt="SG"> سنگاپور</td><td>130 ms</td><td>26%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(10)">کپی</button></td></tr>
-                        <tr><td>USA</td><td><img src="https://flagcdn.com/us.svg" class="flag" alt="US"> آمریکا</td><td>110 ms</td><td>23%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(11)">کپی</button></td></tr>
+                        <tr><td>rAyAn DE</td><td><img src="https://flagcdn.com/de.svg" class="flag" alt="DE"> آلمان</td><td>45 ms</td><td>18%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(0)">کپی</button></td></tr>
+                        <tr><td>hotchoclate</td><td><img src="https://flagcdn.com/de.svg" class="flag" alt="DE"> آلمان</td><td>48 ms</td><td>19%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(1)">کپی</button></td></tr>
+                        <tr><td>finland</td><td><img src="https://flagcdn.com/fi.svg" class="flag" alt="FI"> فنلاند</td><td>55 ms</td><td>20%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(2)">کپی</button></td></tr>
+                        <tr><td>rAyAn IT</td><td><img src="https://flagcdn.com/it.svg" class="flag" alt="IT"> ایتالیا</td><td>60 ms</td><td>21%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(3)">کپی</button></td></tr>
+                        <tr><td>afrcloud JP1</td><td><img src="https://flagcdn.com/jp.svg" class="flag" alt="JP"> ژاپن</td><td>110 ms</td><td>24%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(4)">کپی</button></td></tr>
+                        <tr><td>vl-tl-ws</td><td><img src="https://flagcdn.com/kr.svg" class="flag" alt="KR"> کره جنوبی</td><td>105 ms</td><td>23%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(5)">کپی</button></td></tr>
+                        <tr><td>CREDibLe NL</td><td><img src="https://flagcdn.com/nl.svg" class="flag" alt="NL"> هلند</td><td>65 ms</td><td>19%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(6)">کپی</button></td></tr>
+                        <tr><td>vpnazadie PL</td><td><img src="https://flagcdn.com/pl.svg" class="flag" alt="PL"> لهستان</td><td>70 ms</td><td>20%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(7)">کپی</button></td></tr>
+                        <tr><td>afrcloud SG</td><td><img src="https://flagcdn.com/sg.svg" class="flag" alt="SG"> سنگاپور</td><td>130 ms</td><td>26%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(8)">کپی</button></td></tr>
+                        <tr><td>afrcloud US</td><td><img src="https://flagcdn.com/us.svg" class="flag" alt="US"> آمریکا</td><td>115 ms</td><td>22%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(9)">کپی</button></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -714,7 +624,7 @@ document.addEventListener("DOMContentLoaded",()=>{updateDisplay();setInterval(up
     </div>
 
     <footer>
-        <p>آخرین آپدیت 2026 = پنل اختصاصی Leviko و Faraz ❤️</p>
+        <p>آخرین آپدیت 2026 = پنل اختصاصی Faraz و Leviko ❤️</p>
     </footer>
 </div>
 </body>
